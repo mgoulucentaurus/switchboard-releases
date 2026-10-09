@@ -5,9 +5,9 @@ sessions side by side, see at a glance which one needs you, and take each one fr
 merged pull request, all from one calm native window on macOS and Windows.
 
 <p align="center">
-  <a href="https://github.com/mgoulucentaurus/switchboard-releases/releases/download/v0.1.45/Fleetdeck_0.1.45_universal.dmg"><b>Download for macOS</b></a>
+  <a href="https://github.com/mgoulucentaurus/switchboard-releases/releases/download/v0.1.47/Fleetdeck_0.1.47_universal.dmg"><b>Download for macOS</b></a>
   &nbsp;·&nbsp;
-  <a href="https://github.com/mgoulucentaurus/switchboard-releases/releases/download/v0.1.45/Fleetdeck_0.1.45_x64-setup.exe"><b>Download for Windows</b></a>
+  <a href="https://github.com/mgoulucentaurus/switchboard-releases/releases/download/v0.1.47/Fleetdeck_0.1.47_x64-setup.exe"><b>Download for Windows</b></a>
 </p>
 
 ![The Fleetdeck board: an orchestrator in the center, every agent session around it, each ring colored by its state](docs/screenshots/board.png)
@@ -154,4 +154,4 @@ first if work would be lost.
 
 ---
 
-Latest version: **0.1.45** · [All releases](https://github.com/mgoulucentaurus/switchboard-releases/releases)
+Latest version: **0.1.47** · [All releases](https://github.com/mgoulucentaurus/switchboard-releases/releases)
