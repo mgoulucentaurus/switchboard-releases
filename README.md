@@ -5,9 +5,9 @@ sessions side by side, see at a glance which one needs you, and take each one fr
 merged pull request, all from one calm native window on macOS and Windows.
 
 <p align="center">
-  <a href="https://github.com/mgoulucentaurus/switchboard-releases/releases/download/v0.1.64/Fleetdeck_0.1.64_universal.dmg"><b>Download for macOS</b></a>
+  <a href="https://github.com/mgoulucentaurus/switchboard-releases/releases/download/v0.1.65/Fleetdeck_0.1.65_universal.dmg"><b>Download for macOS</b></a>
   &nbsp;·&nbsp;
-  <a href="https://github.com/mgoulucentaurus/switchboard-releases/releases/download/v0.1.64/Fleetdeck_0.1.64_x64-setup.exe"><b>Download for Windows</b></a>
+  <a href="https://github.com/mgoulucentaurus/switchboard-releases/releases/download/v0.1.65/Fleetdeck_0.1.65_x64-setup.exe"><b>Download for Windows</b></a>
 </p>
 
 ![The Fleetdeck board: an orchestrator in the center, every agent session around it, each ring colored by its state](docs/screenshots/board.png)
@@ -98,6 +98,15 @@ the plain terminal when you want it.
   <img src="docs/screenshots/cloud-machine.png" alt="Cloud machine settings: connected VPS, Claude login, AWS profile" width="49%">
 </p>
 
+### Your fleet in any terminal: `fleet`
+
+`fleet` is Fleetdeck on the command line: a sidebar of your sessions and the open chat with its
+message box, in any terminal. Run it inside a repository to see that repository's sessions and its
+orchestrator, anywhere else to see them all. Switch chats with Ctrl-J/Ctrl-K, send with Enter
+(it queues while the agent works), steer with Alt+Enter, stop the turn with Esc. `fleet ls` prints
+the sessions one per line (`--json` for scripts). It talks to the Fleetdeck app running on the same
+machine, so quitting it leaves every session running.
+
 ### Light, native and local
 
 - **Native Rust app** drawn with [GPUI](https://gpui.rs) (Metal on macOS, DirectX on Windows). No
@@ -122,6 +131,34 @@ The builds aren't code-signed yet, so the first launch needs one extra step:
 - **macOS:** drag Fleetdeck to Applications, then **right-click → Open → Open**. Or run:
   `xattr -dr com.apple.quarantine /Applications/Fleetdeck.app`
 - **Windows:** if SmartScreen appears, click **More info → Run anyway**.
+
+### The `fleet` command line
+
+Install it with one command (it goes in `~/.local/bin` on macOS, `%LOCALAPPDATA%\Programs\fleet` on
+Windows, and the Windows installer adds it to your PATH):
+
+```bash
+# macOS
+curl -fsSL https://github.com/mgoulucentaurus/switchboard-releases/releases/latest/download/install-fleet.sh | bash
+```
+
+```powershell
+# Windows (PowerShell)
+irm https://github.com/mgoulucentaurus/switchboard-releases/releases/latest/download/install-fleet.ps1 | iex
+```
+
+Run the same command again to update. Then, with Fleetdeck open:
+
+```bash
+fleet              # in a repository: its sessions; elsewhere: every repository's
+fleet --all        # every repository, wherever you run it
+fleet ls --json    # the sessions as JSON, for scripts
+fleet --help       # every key and option
+```
+
+Prefer a manual install? Download `fleet-macos-universal.tar.gz` or `fleet-windows-x64.zip` from the
+[latest release](https://github.com/mgoulucentaurus/switchboard-releases/releases/latest) and put
+`fleet` somewhere on your PATH.
 
 ### Requirements
 
@@ -154,4 +191,4 @@ first if work would be lost.
 
 ---
 
-Latest version: **0.1.64** · [All releases](https://github.com/mgoulucentaurus/switchboard-releases/releases)
+Latest version: **0.1.65** · [All releases](https://github.com/mgoulucentaurus/switchboard-releases/releases)
